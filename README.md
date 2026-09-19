@@ -1,6 +1,4 @@
 # LPE Checker [lpechk]
-![GitHub release](https://img.shields.io/github/v/release/wxwreak/lpechk?style=for-the-badge&color=blue)
-![GitHub all releases](https://img.shields.io/github/downloads/wxwreak/lpechk/total?style=for-the-badge&color=green)
 ![lpechk](https://github.com/wxwreak/lpechk/blob/main/lpechk.png)
 
 ---
