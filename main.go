@@ -195,7 +195,7 @@ func main() {
 		"/media": true,
 	}
 	searchDir := "/"
-	filepath.Walk(searchDir, func(path string, info os.FileInfo, err error) error {
+	walkErr := filepath.Walk(searchDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return nil
 		}
@@ -217,6 +217,9 @@ func main() {
 		}
 		return nil
 	})
+	if walkErr != nil {
+		fmt.Printf("%s Error searching for SUID binaries: %v\n", red("[!]"), walkErr)
+	}
 	// Testing /etc/passwd
 	file, err := os.Open("/etc/passwd")
 	if err != nil {
